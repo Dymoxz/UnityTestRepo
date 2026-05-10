@@ -1,47 +1,82 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private float jumpAmount;
+    [SerializeField] private float speed;
+    [SerializeField] private float gravity = -20f;
 
-    public Rigidbody2D rb;
-    public float jumpAmount;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundCheckRadius = 0.2f;
+    [SerializeField] private LayerMask groundLayer;
 
-    public Transform groundCheck;
-    public float groundCheckRadius = 0.2f;
-    public LayerMask groundLayer;
-    public float speed;
-    private bool isGrounded;
     public Canvas gameOverScreen;
 
-    bool isCollidingWithDamage;
+    private Rigidbody2D rb;
+    private InputSystem_Actions inputActions;
+    private Vector2 moveInput;
+    private float verticalVelocity;
+    private bool isGrounded;
+    private bool isCollidingWithDamage;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        inputActions = new InputSystem_Actions();
+    }
+
+    void OnEnable()
+    {
+        inputActions.Player.Enable();
+        inputActions.Player.Jump.performed += OnJump;
+        inputActions.Player.Move.performed += OnMove;
+        inputActions.Player.Move.canceled += OnMove;
+    }
+
+    void OnDisable()
+    {
+        inputActions.Player.Jump.performed -= OnJump;
+        inputActions.Player.Move.performed -= OnMove;
+        inputActions.Player.Move.canceled -= OnMove;
+        inputActions.Player.Disable();
+    }
+
+    private void OnJump(InputAction.CallbackContext context)
+    {
+        if (isGrounded)
+            verticalVelocity = Mathf.Sqrt(jumpAmount * -2f * gravity);
+    }
+
+    private void OnMove(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
+    }
 
     void Update()
     {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        if (!isGrounded)
+            verticalVelocity += gravity * Time.deltaTime;
+        else if (verticalVelocity < 0)
+            verticalVelocity = -2f;
+
+        rb.linearVelocity = new Vector2(moveInput.x * speed, verticalVelocity);
+
         if (isCollidingWithDamage)
         {
             gameOverScreen.gameObject.SetActive(true);
             Time.timeScale = 0f;
         }
-
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
-        }
-        float moveInput = Input.GetAxisRaw("Horizontal"); // -1, 0 or 1
-        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Damage"))
+        if (collision.gameObject.CompareTag("Game Over"))
         {
             isCollidingWithDamage = true;
-           Debug.Log("Collided with damage object!");
+            Debug.Log("Collided with damage object!");
         }
     }
 }
