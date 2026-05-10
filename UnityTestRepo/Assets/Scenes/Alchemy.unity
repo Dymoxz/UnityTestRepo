@@ -291,7 +291,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -315,11 +315,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 422cb3e2d3cdb934680b04ad8f9a4959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  jumpAmount: 5
-  speed: 4
-  graphicsTransform: {fileID: 1379646720}
+  jumpAmount: 24
+  speed: 8
+  graphicsTransform: {fileID: 0}
+  dashSpeed: 20
+  dashDuration: 0.3
   gameOverScreen: {fileID: 0}
-  animator: {fileID: 1379646721}
+  animator: {fileID: 0}
 --- !u!61 &935625747
 BoxCollider2D:
   m_ObjectHideFlags: 0

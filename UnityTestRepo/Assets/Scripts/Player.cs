@@ -6,6 +6,13 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpAmount;
     [SerializeField] private float speed;
     [SerializeField] private Transform graphicsTransform; // Assign the "Graphics" child here
+    [SerializeField] private float dashSpeed = 20f;
+    [SerializeField] private float dashDuration = 0.1f;
+
+    private bool isDashing;
+    private float dashTimer;
+    private float dashDirection;
+    private float dashesRemaining = 2;
 
     public Canvas gameOverScreen;
 
@@ -28,6 +35,7 @@ public class Player : MonoBehaviour
         inputActions.Player.Jump.performed += OnJump;
         inputActions.Player.Move.performed += OnMove;
         inputActions.Player.Move.canceled += OnMove;
+        inputActions.Player.Dash.performed += OnDash; 
     }
 
     void OnDisable()
@@ -35,13 +43,26 @@ public class Player : MonoBehaviour
         inputActions.Player.Jump.performed -= OnJump;
         inputActions.Player.Move.performed -= OnMove;
         inputActions.Player.Move.canceled -= OnMove;
+        inputActions.Player.Dash.performed -= OnDash;
         inputActions.Player.Disable();
+    }
+
+    private void OnDash(InputAction.CallbackContext context)
+    {
+        if (dashesRemaining > 0 && !isDashing)
+        {
+            isDashing = true;
+            dashTimer = dashDuration;
+            //usedDash == 0 or 1 allows dash, if usedDash is 2 or more, it resets to 1 and allows dash again
+            dashesRemaining--;
+            dashDirection = moveInput.x != 0 ? Mathf.Sign(moveInput.x) : 1f;
+        }
     }
 
     private void OnJump(InputAction.CallbackContext context)
     {
         if (isGrounded)
-            rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse + 2);
     }
 
     private void OnMove(InputAction.CallbackContext context)
@@ -51,6 +72,17 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+       
+        if (isDashing)
+        {
+            dashTimer -= Time.deltaTime;
+            rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
+
+            if (dashTimer <= 0f)
+                isDashing = false;
+
+            return; 
+        }
         rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
         animator.SetFloat("Speed", Mathf.Abs(moveInput.x));
 
@@ -61,6 +93,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
             isGrounded = true;
+            dashesRemaining = 2;
 
         if (collision.gameObject.CompareTag("Game Over"))
         {
