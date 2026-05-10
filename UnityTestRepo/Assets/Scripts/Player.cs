@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float jumpAmount;
     [SerializeField] private float speed;
+    [SerializeField] private Transform graphicsTransform; // Assign the "Graphics" child here
 
     public Canvas gameOverScreen;
 
@@ -76,14 +77,13 @@ public class Player : MonoBehaviour
 
     private void Flip()
     {
-        // If moving right and facing left, or moving left and facing right
         if (moveInput.x > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            graphicsTransform.localScale = new Vector3(1, 1, 1);
         }
         else if (moveInput.x < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            graphicsTransform.localScale = new Vector3(-1, 1, 1);
         }
     }
 }
