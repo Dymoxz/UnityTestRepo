@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class Player : MonoBehaviour
 {
@@ -8,6 +9,21 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform graphicsTransform; // Assign the "Graphics" child here
     [SerializeField] private float dashSpeed = 20f;
     [SerializeField] private float dashDuration = 0.1f;
+
+
+    [Header("Ability Settings")]
+    [SerializeField] private float abilityDuration = 5f;
+    [SerializeField] private float speedMultiplier = 1.5f;
+    [SerializeField] private float jumpMultiplier = 1.2f;
+    [SerializeField] private float gravityMultiplier = 0.5f; // Lower gravity for "floaty" jumps
+    [SerializeField] private Sprite abilitySprite;
+    [SerializeField] private BoxCollider2D normalCollider;
+    [SerializeField] private BoxCollider2D abilityCollider;
+
+    private Sprite originalSprite;
+    private SpriteRenderer spriteRenderer;
+    private float originalGravity;
+    private bool isAbilityActive = false;
 
     private bool isDashing;
     private float dashTimer;
@@ -27,6 +43,10 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         inputActions = new InputSystem_Actions();
+
+        spriteRenderer = graphicsTransform.GetComponent<SpriteRenderer>();
+        originalSprite = spriteRenderer.sprite;
+        originalGravity = rb.gravityScale;
     }
 
     void OnEnable()
@@ -35,7 +55,8 @@ public class Player : MonoBehaviour
         inputActions.Player.Jump.performed += OnJump;
         inputActions.Player.Move.performed += OnMove;
         inputActions.Player.Move.canceled += OnMove;
-        inputActions.Player.Dash.performed += OnDash; 
+        inputActions.Player.Dash.performed += OnDash;
+        inputActions.Player.Ability.performed += OnAbility;
     }
 
     void OnDisable()
@@ -44,6 +65,7 @@ public class Player : MonoBehaviour
         inputActions.Player.Move.performed -= OnMove;
         inputActions.Player.Move.canceled -= OnMove;
         inputActions.Player.Dash.performed -= OnDash;
+        inputActions.Player.Ability.performed -= OnAbility;
         inputActions.Player.Disable();
     }
 
@@ -63,6 +85,40 @@ public class Player : MonoBehaviour
     {
         if (isGrounded)
             rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse + 2);
+    }
+
+    private void OnAbility(InputAction.CallbackContext context)
+    {
+        if (!isAbilityActive)
+        {
+            StartCoroutine(ActivateAbility());
+        }
+    }
+    private IEnumerator ActivateAbility()
+    {
+        isAbilityActive = true;
+        animator.SetInteger("FormType", 1); // Switch to Ability animations
+
+        // Apply Buffs
+        speed *= speedMultiplier;
+        jumpAmount *= jumpMultiplier;
+        rb.gravityScale *= gravityMultiplier;
+
+        normalCollider.enabled = false;
+        abilityCollider.enabled = true;
+
+        // Wait for the duration
+        yield return new WaitForSeconds(abilityDuration);
+
+        // Reset Values
+        animator.SetInteger("FormType", 0); // Switch back to Normal        speed /= speedMultiplier;
+        jumpAmount /= jumpMultiplier;
+        rb.gravityScale = originalGravity;
+
+        normalCollider.enabled = true;
+        abilityCollider.enabled = false;
+
+        isAbilityActive = false;
     }
 
     private void OnMove(InputAction.CallbackContext context)
