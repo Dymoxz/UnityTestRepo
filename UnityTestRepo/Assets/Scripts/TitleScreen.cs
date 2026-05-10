@@ -22,6 +22,11 @@ public class TitleScreen : MonoBehaviour
         titleScreenCanvas.SetActive(false);
         StartCoroutine(PlayCutscene());
     }
+    public void RetryGame()
+    {
+        titleScreenCanvas.SetActive(false);
+        player.gameObject.SetActive(true);
+    }
 
     private IEnumerator PlayCutscene()
     {
