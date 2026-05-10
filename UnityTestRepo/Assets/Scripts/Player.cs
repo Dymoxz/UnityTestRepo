@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
 
     private Sprite originalSprite;
     private SpriteRenderer spriteRenderer;
+    private float originalSpeed;
     private float originalGravity;
     private bool isAbilityActive = false;
 
@@ -46,6 +47,7 @@ public class Player : MonoBehaviour
 
         spriteRenderer = graphicsTransform.GetComponent<SpriteRenderer>();
         originalSprite = spriteRenderer.sprite;
+        originalSpeed = speed;
         originalGravity = rb.gravityScale;
     }
 
@@ -114,6 +116,7 @@ public class Player : MonoBehaviour
         animator.SetInteger("FormType", 0); // Switch back to Normal        speed /= speedMultiplier;
         jumpAmount /= jumpMultiplier;
         rb.gravityScale = originalGravity;
+        speed = originalSpeed;
 
         normalCollider.enabled = true;
         abilityCollider.enabled = false;
