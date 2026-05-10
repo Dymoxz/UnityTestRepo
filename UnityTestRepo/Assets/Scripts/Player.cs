@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     private float originalGravity;
     private bool isAbilityActive = false;
 
+    private bool controlsEnabled = false;
+
     private bool isDashing;
     private float dashTimer;
     private float dashDirection;
@@ -49,6 +51,14 @@ public class Player : MonoBehaviour
         originalSprite = spriteRenderer.sprite;
         originalSpeed = speed;
         originalGravity = rb.gravityScale;
+
+        Invoke(nameof(EnableControls), 1.46f);
+    }
+
+    void EnableControls()
+    {
+        controlsEnabled = true;
+        animator.SetTrigger("StartGame");
     }
 
     void OnEnable()

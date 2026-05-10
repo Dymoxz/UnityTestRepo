@@ -1,0 +1,682 @@
+fileFormatVersion: 2
+guid: e63f4b81e5a675141a9bc1488a4d2b32
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2955788407041667018
+    second: '!cauldren_0'
+  - first:
+      213: 8132298424557695361
+    second: '!cauldren_1'
+  - first:
+      213: 6132932910476172603
+    second: '!cauldren_2'
+  - first:
+      213: -8868462012675371323
+    second: '!cauldren_3'
+  - first:
+      213: -3612129636413751451
+    second: '!cauldren_4'
+  - first:
+      213: 5254067395128572604
+    second: '!cauldren_5'
+  - first:
+      213: 8444091517055524686
+    second: '!cauldren_6'
+  - first:
+      213: -6939768135097413382
+    second: '!cauldren_7'
+  - first:
+      213: -1175511258033989205
+    second: '!cauldren_8'
+  - first:
+      213: 514610862080712973
+    second: '!cauldren_9'
+  - first:
+      213: -4762817408931271091
+    second: '!cauldren_10'
+  - first:
+      213: -484451483322092742
+    second: '!cauldren_11'
+  - first:
+      213: -4292036994466091124
+    second: '!cauldren_12'
+  - first:
+      213: 3738427271452499562
+    second: '!cauldren_13'
+  - first:
+      213: -4915573260184657390
+    second: '!cauldren_14'
+  - first:
+      213: -2800858433989751498
+    second: '!cauldren_15'
+  - first:
+      213: -2516358130251581041
+    second: '!cauldren_16'
+  - first:
+      213: 1522747279924978360
+    second: '!cauldren_17'
+  - first:
+      213: -6853879481277973835
+    second: '!cauldren_18'
+  - first:
+      213: 2091036635794520492
+    second: '!cauldren_19'
+  - first:
+      213: 6348548359328177107
+    second: '!cauldren_20'
+  - first:
+      213: -6682317005904139724
+    second: '!cauldren_21'
+  - first:
+      213: 2153036569546834757
+    second: '!cauldren_22'
+  - first:
+      213: 5420275443988249636
+    second: '!cauldren_23'
+  - first:
+      213: 3932091031021295117
+    second: '!cauldren_24'
+  - first:
+      213: -7123431904726330744
+    second: '!cauldren_25'
+  - first:
+      213: 3265044660273230252
+    second: '!cauldren_26'
+  - first:
+      213: -3095695935282000791
+    second: '!cauldren_27'
+  - first:
+      213: -2736514478697994372
+    second: '!cauldren_28'
+  - first:
+      213: -3105410827856369587
+    second: '!cauldren_29'
+  - first:
+      213: -846376784957217335
+    second: '!cauldren_30'
+  - first:
+      213: 2278294424906565283
+    second: '!cauldren_31'
+  - first:
+      213: 5325096641431452769
+    second: '!cauldren_32'
+  - first:
+      213: 2859378353258494037
+    second: '!cauldren_33'
+  - first:
+      213: -3186723983637250725
+    second: '!cauldren_34'
+  - first:
+      213: -7272706783560718161
+    second: '!cauldren_35'
+  - first:
+      213: -2353681171597918425
+    second: '!cauldren_36'
+  - first:
+      213: -1104352748795239455
+    second: '!cauldren_37'
+  - first:
+      213: 1646808253770775522
+    second: '!cauldren_38'
+  - first:
+      213: -6053594373515204742
+    second: '!cauldren_39'
+  - first:
+      213: -3072157708162589314
+    second: '!cauldren_40'
+  - first:
+      213: -487269675890883801
+    second: '!cauldren_41'
+  - first:
+      213: -8360034648970061580
+    second: '!cauldren_42'
+  - first:
+      213: -2047993254612053103
+    second: '!cauldren_43'
+  - first:
+      213: -3064712878837648226
+    second: '!cauldren_44'
+  - first:
+      213: 2245622276792021156
+    second: '!cauldren_45'
+  - first:
+      213: 7474945443152707823
+    second: '!cauldren_46'
+  - first:
+      213: -3445985048923560400
+    second: '!cauldren_47'
+  - first:
+      213: -6498048059570341159
+    second: '!cauldren_48'
+  - first:
+      213: 3761348860635138228
+    second: '!cauldren_49'
+  - first:
+      213: -4367455092225860357
+    second: '!cauldren_50'
+  - first:
+      213: 3128733666450239544
+    second: '!cauldren_51'
+  - first:
+      213: -8945203043840496672
+    second: '!cauldren_52'
+  - first:
+      213: -1442170435697367509
+    second: '!cauldren_53'
+  - first:
+      213: -2638240766830930776
+    second: '!cauldren_54'
+  - first:
+      213: -6937636835706619404
+    second: '!cauldren_55'
+  - first:
+      213: -2674087748792202213
+    second: '!cauldren_56'
+  - first:
+      213: -4607638449984110605
+    second: '!cauldren_57'
+  - first:
+      213: 5008177687266026914
+    second: '!cauldren_58'
+  - first:
+      213: 7547458863442750329
+    second: '!cauldren_59'
+  - first:
+      213: -1479442675874097739
+    second: '!cauldren_60'
+  - first:
+      213: 4000910892514301596
+    second: '!cauldren_61'
+  - first:
+      213: 7707777458620240997
+    second: '!cauldren_62'
+  - first:
+      213: -6876791914240489204
+    second: '!cauldren_63'
+  - first:
+      213: -4539122818280408745
+    second: '!cauldren_64'
+  - first:
+      213: -6863176650075552570
+    second: '!cauldren_65'
+  - first:
+      213: 5965581630395466192
+    second: '!cauldren_66'
+  - first:
+      213: 7057755719237175694
+    second: '!cauldren_67'
+  - first:
+      213: -8729265486657388582
+    second: '!cauldren_68'
+  - first:
+      213: 2252445539704433363
+    second: '!cauldren_69'
+  - first:
+      213: 8468330208349434696
+    second: '!cauldren_70'
+  - first:
+      213: 6176730398829873658
+    second: '!cauldren_71'
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: '!cauldren_6'
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4fdbfcfe707f2570800000000000000
+      internalID: 8444091517055524686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '!cauldren_7'
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af091fb46adf0bf90800000000000000
+      internalID: -6939768135097413382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '!cauldren_8'
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba9596b2dbebfafe0800000000000000
+      internalID: -1175511258033989205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '!cauldren_0'
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8e5dcf4046ed94894d88b74d071b84
+      internalID: 2955788407041667018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '!cauldren_1'
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c588562240256b4dbe2663c30864cfe
+      internalID: 8132298424557695361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '!cauldren_2'
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58bfcb1fc4f58e34eb0b2cae85c7f853
+      internalID: 6132932910476172603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '!cauldren_3'
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cbe14cf2d1fe5d48b6b6229ac965532
+      internalID: -8868462012675371323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '!cauldren_4'
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c320e9c60e7d574890b9e53abce2740
+      internalID: -3612129636413751451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '!cauldren_5'
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08adeb1e410f744498c0d2fc44600ad7
+      internalID: 5254067395128572604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '!cauldren_12'
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd6061a50b299f4ea0bd78db5dc7ea9
+      internalID: -4292036994466091124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '!cauldren_13'
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240d13450ed919c46a3695a8adefe007
+      internalID: 3738427271452499562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '!cauldren_14'
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c0d845f4ad7824b81f777fc3f98d3b
+      internalID: -4915573260184657390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 060a20151979c9c428c6125f2574095d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      '!cauldren_0': 2955788407041667018
+      '!cauldren_1': 8132298424557695361
+      '!cauldren_10': -4762817408931271091
+      '!cauldren_11': -484451483322092742
+      '!cauldren_12': -4292036994466091124
+      '!cauldren_13': 3738427271452499562
+      '!cauldren_14': -4915573260184657390
+      '!cauldren_15': -2800858433989751498
+      '!cauldren_16': -2516358130251581041
+      '!cauldren_17': 1522747279924978360
+      '!cauldren_18': -6853879481277973835
+      '!cauldren_19': 2091036635794520492
+      '!cauldren_2': 6132932910476172603
+      '!cauldren_20': 6348548359328177107
+      '!cauldren_21': -6682317005904139724
+      '!cauldren_22': 2153036569546834757
+      '!cauldren_23': 5420275443988249636
+      '!cauldren_24': 3932091031021295117
+      '!cauldren_25': -7123431904726330744
+      '!cauldren_26': 3265044660273230252
+      '!cauldren_27': -3095695935282000791
+      '!cauldren_28': -2736514478697994372
+      '!cauldren_29': -3105410827856369587
+      '!cauldren_3': -8868462012675371323
+      '!cauldren_30': -846376784957217335
+      '!cauldren_31': 2278294424906565283
+      '!cauldren_32': 5325096641431452769
+      '!cauldren_33': 2859378353258494037
+      '!cauldren_34': -3186723983637250725
+      '!cauldren_35': -7272706783560718161
+      '!cauldren_36': -2353681171597918425
+      '!cauldren_37': -1104352748795239455
+      '!cauldren_38': 1646808253770775522
+      '!cauldren_39': -6053594373515204742
+      '!cauldren_4': -3612129636413751451
+      '!cauldren_40': -3072157708162589314
+      '!cauldren_41': -487269675890883801
+      '!cauldren_42': -8360034648970061580
+      '!cauldren_43': -2047993254612053103
+      '!cauldren_44': -3064712878837648226
+      '!cauldren_45': 2245622276792021156
+      '!cauldren_46': 7474945443152707823
+      '!cauldren_47': -3445985048923560400
+      '!cauldren_48': -6498048059570341159
+      '!cauldren_49': 3761348860635138228
+      '!cauldren_5': 5254067395128572604
+      '!cauldren_50': -4367455092225860357
+      '!cauldren_51': 3128733666450239544
+      '!cauldren_52': -8945203043840496672
+      '!cauldren_53': -1442170435697367509
+      '!cauldren_54': -2638240766830930776
+      '!cauldren_55': -6937636835706619404
+      '!cauldren_56': -2674087748792202213
+      '!cauldren_57': -4607638449984110605
+      '!cauldren_58': 5008177687266026914
+      '!cauldren_59': 7547458863442750329
+      '!cauldren_6': 8444091517055524686
+      '!cauldren_60': -1479442675874097739
+      '!cauldren_61': 4000910892514301596
+      '!cauldren_62': 7707777458620240997
+      '!cauldren_63': -6876791914240489204
+      '!cauldren_64': -4539122818280408745
+      '!cauldren_65': -6863176650075552570
+      '!cauldren_66': 5965581630395466192
+      '!cauldren_67': 7057755719237175694
+      '!cauldren_68': -8729265486657388582
+      '!cauldren_69': 2252445539704433363
+      '!cauldren_7': -6939768135097413382
+      '!cauldren_70': 8468330208349434696
+      '!cauldren_71': 6176730398829873658
+      '!cauldren_8': -1175511258033989205
+      '!cauldren_9': 514610862080712973
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
