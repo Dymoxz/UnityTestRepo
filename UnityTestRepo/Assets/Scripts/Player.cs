@@ -5,20 +5,13 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float jumpAmount;
     [SerializeField] private float speed;
-    [SerializeField] private float gravity = -20f;
-
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private float groundCheckRadius = 0.2f;
-    [SerializeField] private LayerMask groundLayer;
 
     public Canvas gameOverScreen;
 
     private Rigidbody2D rb;
     private InputSystem_Actions inputActions;
     private Vector2 moveInput;
-    private float verticalVelocity;
     private bool isGrounded;
-    private bool isCollidingWithDamage;
 
     void Awake()
     {
@@ -45,7 +38,7 @@ public class Player : MonoBehaviour
     private void OnJump(InputAction.CallbackContext context)
     {
         if (isGrounded)
-            verticalVelocity = Mathf.Sqrt(jumpAmount * -2f * gravity);
+            rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
     }
 
     private void OnMove(InputAction.CallbackContext context)
@@ -55,28 +48,25 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
 
-        if (!isGrounded)
-            verticalVelocity += gravity * Time.deltaTime;
-        else if (verticalVelocity < 0)
-            verticalVelocity = -2f;
+    }
 
-        rb.linearVelocity = new Vector2(moveInput.x * speed, verticalVelocity);
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+            isGrounded = true;
 
-        if (isCollidingWithDamage)
+        if (collision.gameObject.CompareTag("Game Over"))
         {
             gameOverScreen.gameObject.SetActive(true);
             Time.timeScale = 0f;
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Game Over"))
-        {
-            isCollidingWithDamage = true;
-            Debug.Log("Collided with damage object!");
-        }
+        if (collision.gameObject.CompareTag("Ground"))
+            isGrounded = false;
     }
 }
