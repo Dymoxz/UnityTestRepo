@@ -26,8 +26,15 @@ public class Player : MonoBehaviour
     private float originalGravity;
     private bool isAbilityActive = false;
 
+    /*AUDIO*/
+    private AudioSource dashAudioSource;
+    private AudioSource runningAudioSource;
+    public AudioClip dashSound;
+    public AudioClip runningSound;
+
     private bool controlsEnabled = false;
 
+    /*DASHING*/
     private bool isDashing;
     private float dashTimer;
     private float dashDirection;
@@ -46,7 +53,8 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         inputActions = new InputSystem_Actions();
-
+        dashAudioSource = GetComponent<AudioSource>();
+        runningAudioSource = GetComponent<AudioSource>();
         spriteRenderer = graphicsTransform.GetComponent<SpriteRenderer>();
         originalSprite = spriteRenderer.sprite;
         originalSpeed = speed;
@@ -90,6 +98,7 @@ public class Player : MonoBehaviour
             //usedDash == 0 or 1 allows dash, if usedDash is 2 or more, it resets to 1 and allows dash again
             dashesRemaining--;
             dashDirection = moveInput.x != 0 ? Mathf.Sign(moveInput.x) : 1f;
+            dashAudioSource.PlayOneShot(dashSound);
         }
     }
 
@@ -137,6 +146,15 @@ public class Player : MonoBehaviour
     private void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+        if (moveInput.x != 0)
+        {
+            if (!runningAudioSource.isPlaying)
+                runningAudioSource.Play();
+        }
+        else
+        {
+            runningAudioSource.Stop();
+        }
     }
 
     void Update()
