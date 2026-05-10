@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Game Over
   - Ground
+  - JumpPad
   layers:
   - Default
   - TransparentFX
