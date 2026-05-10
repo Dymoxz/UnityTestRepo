@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     private Vector2 moveInput;
     private bool isGrounded;
 
+    public Animator animator;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -49,7 +51,9 @@ public class Player : MonoBehaviour
     void Update()
     {
         rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
+        animator.SetFloat("Speed", Mathf.Abs(moveInput.x));
 
+        Flip();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -68,5 +72,18 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
             isGrounded = false;
+    }
+
+    private void Flip()
+    {
+        // If moving right and facing left, or moving left and facing right
+        if (moveInput.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (moveInput.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 }
